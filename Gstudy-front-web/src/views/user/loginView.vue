@@ -23,12 +23,12 @@ const handleClick = () => {
         </a-input>
       </div>
       <div class="form-item">
-        <a-input class="input-item" :style="{ width: '320px', color: '#fff' }" type="password" placeholder="输入密码"
+        <a-input-password class="input-item" :style="{ width: '320px', color: '#fff' }"  placeholder="输入密码"
           allow-clear>
           <template #prefix>
             <img src="../../assets/user/lock.png" alt="lock" width="14">
           </template>
-        </a-input>
+        </a-input-password>
       </div>
       <div class="form-item" style="display: flex; justify-content: space-between;">
         <div>

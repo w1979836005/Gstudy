@@ -22,6 +22,7 @@ import GlobalFooter from '@/components/globalFooter.vue'
   min-height: 92vh;
 
   .header {
+    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;

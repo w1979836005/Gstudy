@@ -99,7 +99,7 @@ const handleLogin = () => {
   height: 100%;
   width: 100%;
   padding: 0 10px;
-  background-color: rgba(234, 234, 234, 0.8);
+  background-color: rgba(234, 234, 234, 1);
   color: black;
 
 
