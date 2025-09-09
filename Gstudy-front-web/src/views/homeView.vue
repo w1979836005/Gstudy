@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import ArticleListCard from '@/components/home/articleListCard.vue'
+import HotSubjects from '@/components/home/hotSubjects.vue'
 </script>
 
 <template>
   <div id="homeView">
+    <div class="title-box">热门话题：</div>
+    <HotSubjects style="margin-bottom: 20px"/>
+
     <div class="title-box">今日趣事：</div>
     <ArticleListCard/>
   </div>

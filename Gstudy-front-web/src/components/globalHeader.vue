@@ -77,6 +77,10 @@ const handleLogin = () => {
         </div>
       </div>
 
+     <div class="search-bar">
+       <a-input-search :style="{width:'320px',height:'28px', borderRadius:'8px'}" placeholder="快来找找有趣的事情吧"/>
+     </div>
+
     </div>
 
     <div class="user-info">
@@ -143,6 +147,7 @@ const handleLogin = () => {
       }
     }
 
+
     .nav-item {
       border-radius: 6px;
       display: flex;
@@ -172,5 +177,9 @@ const handleLogin = () => {
     justify-content: center;
   }
 
+}
+
+.search-bar {
+  margin-left: 6rem;
 }
 </style>
