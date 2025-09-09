@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TypeWrite from '@/components/TypeWrite.vue';
+import TypeWrite from '@/components/typeWrite.vue';
 </script>
 <template>
   <!-- 用户登录注册布局 layout -->

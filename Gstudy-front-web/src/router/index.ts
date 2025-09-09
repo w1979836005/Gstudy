@@ -1,12 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/homeView.vue'
 import QuestionView from '@/views/QuestionView.vue'
-import BasicLayout from '@/layouts/BasicLayout.vue'
-import AboutView from '@/views/AboutView.vue'
+import BasicLayout from '@/layouts/basicLayout.vue'
+import AboutView from '@/views/aboutView.vue'
 import CourseView from '@/views/courseView.vue'
-import UserLayout from '@/layouts/UserLayout.vue'
-import LoginView from '@/views/user/LoginView.vue'
-import RegisterView from '@/views/user/RegisterView.vue'
+import UserLayout from '@/layouts/userLayout.vue'
+import LoginView from '@/views/user/loginView.vue'
+import RegisterView from '@/views/user/registerView.vue'
 
 const baseUrl = '/'
 const router = createRouter({

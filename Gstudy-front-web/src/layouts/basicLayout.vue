@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import GlobalHeader from '@/components/GlobalHeader.vue';
+import GlobalHeader from '@/components/globalHeader.vue';
+import GlobalFooter from '@/components/globalFooter.vue'
 
 </script>
 <template>
@@ -10,7 +11,9 @@ import GlobalHeader from '@/components/GlobalHeader.vue';
     <div class="content">
       <router-view />
     </div>
-    <div class="footer">footer</div>
+    <div class="footer">
+      <GlobalFooter/>
+    </div>
   </div>
 </template>
 <style lang="less" scoped>
@@ -27,9 +30,14 @@ import GlobalHeader from '@/components/GlobalHeader.vue';
   }
 
   .content {
-    margin-top: 60px;
+    margin-top: 48px;
     padding: 10px;
     min-height: 100vh;
+    background: #efefef;
+  }
+  .footer {
+    width: 100%;
+    min-height: 48px;
   }
 }
 </style>
