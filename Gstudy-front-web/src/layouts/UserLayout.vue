@@ -37,7 +37,7 @@ import TypeWrite from '@/components/TypeWrite.vue';
     position: relative;
     width: 38%;
     height: 100vh;
-    background-color: rgba(10, 12, 14, 0.7);
+    background-color: rgba(31, 16, 36, 0.85);
     border-right: 1px solid rgba(27, 17, 17, 0.1);
 
     display: flex;
@@ -60,7 +60,7 @@ import TypeWrite from '@/components/TypeWrite.vue';
       width: 100%;
       height: 35rem;
       margin-top: 15%;
-      background: rebeccapurple;
+      z-index: 1000;
 
       display: flex;
       align-items: center;
