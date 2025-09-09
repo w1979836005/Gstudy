@@ -19,7 +19,7 @@ import GlobalFooter from '@/components/globalFooter.vue'
 <style lang="less" scoped>
 #basicLayout {
   width: 100%;
-  height: 100vh;
+  min-height: 92vh;
 
   .header {
     position: fixed;
@@ -31,13 +31,13 @@ import GlobalFooter from '@/components/globalFooter.vue'
 
   .content {
     margin-top: 48px;
-    padding: 10px;
-    min-height: 100vh;
+    padding: 40px 10px 10px 10px;
     background: #efefef;
+    min-height: calc(100vh - 48px - 48px);
   }
   .footer {
     width: 100%;
-    min-height: 48px;
+    height: 48px;
   }
 }
 </style>

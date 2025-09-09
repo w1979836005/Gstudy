@@ -9,5 +9,8 @@
 </template>
 
 <style scoped lang="less">
-
+#globalFooter {
+  width: 100%;
+  height: 48px;
+}
 </style>
