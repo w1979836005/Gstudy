@@ -5,7 +5,7 @@ import HotSubjects from '@/components/home/hotSubjects.vue'
 
 <template>
   <div id="homeView">
-    <div class="title-box">热门话题：</div>
+    <div class="title-box">话题大全：</div>
     <HotSubjects style="margin-bottom: 20px"/>
 
     <div class="title-box">今日趣事：</div>
