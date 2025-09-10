@@ -3,6 +3,7 @@ import ArticleCard from '@/components/home/articleCard.vue'
 import type { ArticleType } from '@/components/home/type'
 import userAvatar from '@/assets/user.webp'
 import { onMounted, onUnmounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 
 //生成加载文章
@@ -97,6 +98,13 @@ onUnmounted(() => {
     observer.value.unobserve(sentinel.value)
   }
 })
+
+
+//跳转详情
+const router = useRouter()
+const handleGoDetail = (id:number):void => {
+  router.push(`/article/${id}`)
+}
 </script>
 
 <template>
@@ -104,7 +112,7 @@ onUnmounted(() => {
   <div class="my-card">
     <a-tabs default-active-key="1">
       <a-tab-pane key="1" title="推荐" class="article-box">
-        <article-card v-for="article in articles" :key="article.id" :article="article"/>
+        <article-card v-for="article in articles" :key="article.id" :article="article" @click="handleGoDetail(article.id)"/>
 
 <!--        加载状态提示-->
         <div class="load-more-container">

@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/homeView.vue'
-import QuestionView from '@/views/QuestionView.vue'
 import BasicLayout from '@/layouts/basicLayout.vue'
 import AboutView from '@/views/aboutView.vue'
 import CourseView from '@/views/courseView.vue'
 import UserLayout from '@/layouts/userLayout.vue'
 import LoginView from '@/views/user/loginView.vue'
 import RegisterView from '@/views/user/registerView.vue'
+import ArticleDetail from '@/components/home/articleDetail.vue'
+import QuestionView from '@/views/questionView.vue'
 
 const baseUrl = '/'
 const router = createRouter({
@@ -31,6 +32,11 @@ const router = createRouter({
           path: 'question',
           name: 'question',
           component: QuestionView,
+        },
+        {
+          path: 'article/:id',
+          name: 'articleDetail',
+          component: ArticleDetail,
         },
         {
           path: 'about',

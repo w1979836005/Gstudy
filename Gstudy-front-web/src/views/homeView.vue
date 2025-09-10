@@ -18,7 +18,7 @@ import SubmitArticle from '@/components/home/submitArticle.vue'
 <style lang="less" scoped>
 #homeView {
   width: 100%;
-  height: 100%;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
