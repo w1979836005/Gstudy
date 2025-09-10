@@ -1,15 +1,17 @@
 <script setup lang="ts">
 import ArticleListCard from '@/components/home/articleListCard.vue'
 import HotSubjects from '@/components/home/hotSubjects.vue'
+import SubmitArticle from '@/components/home/submitArticle.vue'
 </script>
 
 <template>
   <div id="homeView">
     <div class="title-box">话题大全：</div>
-    <HotSubjects style="margin-bottom: 20px"/>
-
+    <hot-subjects/>
+    <div class="title-box">分享新鲜事：</div>
+    <submit-article />
     <div class="title-box">今日趣事：</div>
-    <ArticleListCard/>
+    <article-list-card/>
   </div>
 </template>
 
@@ -23,6 +25,7 @@ import HotSubjects from '@/components/home/hotSubjects.vue'
   align-items: center;
 
   .title-box {
+    margin-top: 20px;
     width: 70%;
     margin-bottom: 20px;
     font-size: 16px;

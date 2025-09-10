@@ -84,6 +84,7 @@ const handleLogin = () => {
     </div>
 
     <div class="user-info">
+      <a-switch style="margin-right: 2rem" checked-color="black" unchecked-color="#14C9C9" />
       <div v-if="userLoginState">高桥凉介</div>
       <div v-else>
         <a-button @click="handleLogin" type="primary" style="border-radius: 6px; font-size: 12px" size="small">登录</a-button>
@@ -171,7 +172,7 @@ const handleLogin = () => {
   }
 
   .user-info {
-    width: 120px;
+    width: 240px;
     display: flex;
     align-items: center;
     justify-content: center;

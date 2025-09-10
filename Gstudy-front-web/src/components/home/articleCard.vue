@@ -1,11 +1,27 @@
 <script setup lang="ts">
 import type { ArticleType } from '@/components/home/type'
+import { ref } from 'vue'
 
-
+// 文章数据类型
 const props = defineProps<{
-  article:ArticleType
+  article: ArticleType
 }>()
 
+
+/**
+ * 弹出框
+ */
+const visible = ref(false);
+
+const handleClick = () => {
+  visible.value = true;
+};
+const handleOk = () => {
+  visible.value = false;
+};
+const handleCancel = () => {
+  visible.value = false;
+}
 </script>
 
 <template>
@@ -47,7 +63,7 @@ const props = defineProps<{
           <img class="hover-img"   src="../../assets/home/爱心%20(1).png" alt=""  width="18">
           <span>{{props.article.likeCount}}</span>
         </div>
-        <div class="article-mess-item" style="cursor:pointer;">
+        <div class="article-mess-item" style="cursor:pointer;" @click="handleClick">
           <img class="default-img"  src="../../assets/home/消息%20(3).png" alt=""  width="18">
           <img class="hover-img"   src="../../assets/home/消息%20(4).png" alt=""  width="18">
           <span>{{props.article.messageCount}}</span>
@@ -59,12 +75,47 @@ const props = defineProps<{
         </div>
       </div>
       <a-divider  />
+
+      <a-drawer
+        :width="340"
+        :height="480"
+        :visible="visible"
+        placement="bottom"
+        @ok="handleOk"
+        @cancel="handleCancel"
+        unmountOnClose
+      >
+        <template #title>
+          评论
+        </template>
+        <div class="drawer-content-container">
+          <img src="../../assets/user.webp" width="48" class="userAvatar" alt="userAvatar">
+          <a-textarea placeholder="在这里写评论" />
+        </div>
+        <div class="user-commit" v-for="item in 3" :key="item">
+          <img src="../../assets/user.webp" width="48" class="userAvatar" alt="userAvatar">
+          <div>
+            <div class="one-line">
+              <div  class="username">高桥凉介</div>
+              <div class="time-mess">2025-08-25 21:49 · 安徽</div>
+              <img src="../../assets/home/爱心.png" class="icon" alt="" width="16" height="16">
+              <div style="font-size: 12px; margin-left: 2px">32</div>
+              <img src="../../assets/home/心碎.png" class="icon" alt="" width="16" height="16">
+              <div style="font-size: 12px; margin-left: 2px">32</div>
+            </div>
+            <div class="commit-text">
+              写的真不错思路清晰,写的真不错思路清晰,写的真不错思路清晰,写的真不错思路清晰,写的真不错思路清晰,写的真不错思路清晰
+            </div>
+          </div>
+        </div>
+      </a-drawer>
     </div>
   </div>
 </template>
 
 <style scoped lang="less">
 .article-item {
+  cursor:pointer;
   min-height: 15rem !important;
   width: 90% !important;
   margin: 0 auto;
@@ -154,7 +205,51 @@ const props = defineProps<{
   }
 }
 
+.drawer-content-container {
+  display: flex;
+  align-items: center;
+}
+.userAvatar {
+  border-radius: 50%;
+  margin-right: 10px;
+}
 
+.user-commit {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+
+  .one-line {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .icon {
+    margin-left: 5px;
+    vertical-align: center;
+    cursor: pointer;
+  }
+}
+
+.time-mess {
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.commit-text {
+  margin-top: 5px;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.username {
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.username:hover {
+  color: #165dff;
+}
 :deep(.arco-divider-horizontal) {
   position: relative;
   clear: both;
